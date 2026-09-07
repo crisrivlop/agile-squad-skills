@@ -1,0 +1,47 @@
+﻿name: Lint & Validate Skills Catalog
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    name: Validate JSON Schema & Markdown Integrity
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate roles.json JSON Syntax & Skill References
+        run: |
+          node -e "
+            const fs = require('fs');
+            const path = require('path');
+            const rolesData = JSON.parse(fs.readFileSync('squad/roles.json', 'utf-8'));
+            console.log('Roles manifest syntax valid. Version:', rolesData.version);
+            console.log('Total roles defined:', rolesData.roles.length);
+
+            let errors = 0;
+            for (const r of rolesData.roles) {
+              for (const skill of r.consumed_skills) {
+                const skillFile = path.join('skills', skill, 'SKILL.md');
+                if (!fs.existsSync(skillFile)) {
+                  console.error('Missing SKILL.md for skill reference:', skill, 'in role:', r.id);
+                  errors++;
+                }
+              }
+            }
+            if (errors > 0) {
+              console.error('Validation failed with', errors, 'errors.');
+              process.exit(1);
+            }
+            console.log('All referenced SKILL.md files physically exist on disk!');
+          "
