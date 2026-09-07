@@ -1,6 +1,6 @@
-﻿{
+{
   "name": "Agile AI Squad",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Squad ágil de agentes especializados para el ciclo de vida del software (SDLC)",
   "roles": [
     {
@@ -86,6 +86,13 @@
       "slug": "version-bump-guardian",
       "consumed_skills": ["version-bump-guardian", "branch-gitflow-guardian"],
       "responsibilities": ["SemVer Automático", "Auditoría Física de Artefactos", "Trazabilidad Inmutable"]
+    },
+    {
+      "id": "repo_integrator",
+      "name": "Repository & Monorepo Integrator",
+      "slug": "repo-integrator-sentinel",
+      "consumed_skills": ["repo-integrator-sentinel", "branch-gitflow-guardian"],
+      "responsibilities": ["Integración Multi-Repositorio", "Resolución de Dependencias Cruzadas", "Verificación de Contratos de API", "Sincronización de Monorepos"]
     }
   ]
 }
