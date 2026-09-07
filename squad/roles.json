@@ -1,6 +1,6 @@
 ﻿{
   "name": "Agile AI Squad",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Squad ágil de agentes especializados para el ciclo de vida del software (SDLC)",
   "roles": [
     {
@@ -23,6 +23,20 @@
       "slug": "senior-tech-architect",
       "consumed_skills": ["senior-tech-architect", "clean-code-reviewer"],
       "responsibilities": ["Volumetría y Cuotas", "Clean Architecture", "Definition of Done (DoD)"]
+    },
+    {
+      "id": "branch_manager",
+      "name": "Branch & GitFlow Manager",
+      "slug": "branch-gitflow-guardian",
+      "consumed_skills": ["branch-gitflow-guardian"],
+      "responsibilities": ["Taxonomía de Ramas", "Protección de Main y PRs", "Resolución Limpia de Conflictos"]
+    },
+    {
+      "id": "rnd_lead",
+      "name": "R&D & Innovation Lead",
+      "slug": "rnd-innovation-sentinel",
+      "consumed_skills": ["rnd-innovation-sentinel"],
+      "responsibilities": ["Pruebas de Concepto (Spikes)", "Evaluación de Nuevas Tecnologías", "Análisis Forense de Bugs Complejos"]
     },
     {
       "id": "ux_designer",
@@ -70,7 +84,7 @@
       "id": "release_guardian",
       "name": "Release & Version Guardian",
       "slug": "version-bump-guardian",
-      "consumed_skills": ["version-bump-guardian"],
+      "consumed_skills": ["version-bump-guardian", "branch-gitflow-guardian"],
       "responsibilities": ["SemVer Automático", "Auditoría Física de Artefactos", "Trazabilidad Inmutable"]
     }
   ]
