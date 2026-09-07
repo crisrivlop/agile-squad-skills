@@ -1,0 +1,77 @@
+﻿{
+  "name": "Agile AI Squad",
+  "version": "1.0.0",
+  "description": "Squad ágil de agentes especializados para el ciclo de vida del software (SDLC)",
+  "roles": [
+    {
+      "id": "po",
+      "name": "Product Owner",
+      "slug": "product-owner-sentinel",
+      "consumed_skills": ["product-owner-sentinel"],
+      "responsibilities": ["Refinamiento con Stakeholders", "Triángulo de Hierro", "Historias de Usuario Given/When/Then"]
+    },
+    {
+      "id": "scrum_master",
+      "name": "Scrum Master",
+      "slug": "scrum-master-sentinel",
+      "consumed_skills": ["scrum-master-sentinel"],
+      "responsibilities": ["Inventario del Backlog", "Gobernanza de Checklist", "Aprobación Humana Obligatoria"]
+    },
+    {
+      "id": "architect",
+      "name": "Senior Technical Architect",
+      "slug": "senior-tech-architect",
+      "consumed_skills": ["senior-tech-architect", "clean-code-reviewer"],
+      "responsibilities": ["Volumetría y Cuotas", "Clean Architecture", "Definition of Done (DoD)"]
+    },
+    {
+      "id": "ux_designer",
+      "name": "UX/UI Design Lead",
+      "slug": "ux-ui-design-sentinel",
+      "consumed_skills": ["ux-ui-design-sentinel"],
+      "responsibilities": ["Ergonomía de Interfaz", "Accesibilidad WCAG AA", "Estados de Carga y Vacíos"]
+    },
+    {
+      "id": "clean_code",
+      "name": "Clean Code Reviewer",
+      "slug": "clean-code-reviewer",
+      "consumed_skills": ["clean-code-reviewer"],
+      "responsibilities": ["Early Returns / Cláusulas de Guarda", "DRY y KISS", "Aplanado de Flujo"]
+    },
+    {
+      "id": "qa_lead",
+      "name": "QA Lead",
+      "slug": "qa-lead-sentinel",
+      "consumed_skills": ["qa-lead-sentinel"],
+      "responsibilities": ["100% Cobertura Lógica", "Verificación Real de UI", "Casos Borde"]
+    },
+    {
+      "id": "appsec",
+      "name": "Security & AppSec Lead",
+      "slug": "security-appsec-sentinel",
+      "consumed_skills": ["security-appsec-sentinel"],
+      "responsibilities": ["Prevención Fuga de Secretos", "OWASP Top 10", "Auditoría de Dependencias"]
+    },
+    {
+      "id": "devops",
+      "name": "DevOps & SRE",
+      "slug": "devops-sre-sentinel",
+      "consumed_skills": ["devops-sre-sentinel"],
+      "responsibilities": ["Pipelines CI/CD", "Observabilidad", "Estrategias Zero-Downtime"]
+    },
+    {
+      "id": "analytics",
+      "name": "Data & Analytics Lead",
+      "slug": "data-analytics-sentinel",
+      "consumed_skills": ["data-analytics-sentinel"],
+      "responsibilities": ["Taxonomía de Eventos", "Métricas de Negocio", "Privacidad GDPR/CCPA"]
+    },
+    {
+      "id": "release_guardian",
+      "name": "Release & Version Guardian",
+      "slug": "version-bump-guardian",
+      "consumed_skills": ["version-bump-guardian"],
+      "responsibilities": ["SemVer Automático", "Auditoría Física de Artefactos", "Trazabilidad Inmutable"]
+    }
+  ]
+}
